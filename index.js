@@ -32,9 +32,7 @@ exports.fibonacci = (req, res) => {
         if (Number.isInteger(compute)) {
 
             // return result in json format
-            res.status(200).send(JSON.stringify({
-                result: isOddSum(fibonacci(compute))
-            }));
+            res.status(200).send({result: isOddSum(fibonacci(compute))});
 
         } else {
             res.status(404).send('I need only a number! But you put a ' + typeof(compute));
