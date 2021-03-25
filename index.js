@@ -12,11 +12,11 @@ exports.fibonacci = (req, res) => {
     }
 
     // get array and calc sum of odd numbers
-    function isOddSumm(array) {
+    function isOddSum(array) {
         let res = 0;
-        for (let i = 0; i < array.length; i++) {
-            if (array[i] % 2 == 1) {
-                res =+ array[i];
+        for (i = 0; i <= array.length; i++) {
+            if (array[i] % 2 === 1) {
+                res += array[i];
             }
         }
         return res;
@@ -33,7 +33,7 @@ exports.fibonacci = (req, res) => {
 
             // return result in json format
             res.status(200).send(JSON.stringify({
-                result: isOddSumm(fibonacci(compute))
+                result: isOddSum(fibonacci(compute))
             }));
 
         } else {
