@@ -1,11 +1,11 @@
 exports.fibonacci = (req, res) => {
-
+    
     let compute;
 
     // make array with Fibonacci numbers which is limited by a num  
     function fibonacci(num) {
         let fib = [0, 1];
-        for (let i = 2; i < parseInt(num); i++) {
+        for (let i = 2; i < num; i++) {
             fib[i] = fib[i - 2] + fib[i - 1];
         }
         return fib;
@@ -39,8 +39,8 @@ exports.fibonacci = (req, res) => {
         } else {
             res.status(404).send('I need only a number! But you put a ' + typeof(compute));
         }
+
     } else {
         res.status(404).send('I need only json format!');
     }
-
 };
