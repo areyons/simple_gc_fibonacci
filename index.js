@@ -1,5 +1,5 @@
 exports.fibonacci = (req, res) => {
-    
+
     let compute;
 
     // make array with Fibonacci numbers which is limited by a num  
@@ -15,7 +15,7 @@ exports.fibonacci = (req, res) => {
     function isOddSum(array) {
         let res = 0;
         for (i = 0; i <= array.length; i++) {
-            if (array[i] % 2 === 1) {
+            if (array[i] % 2) {
                 res += array[i];
             }
         }
